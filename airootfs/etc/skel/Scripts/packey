@@ -1,0 +1,8 @@
+#!/bin/bash
+# Setup up pacman keys
+# by Mr Green [mrgreen@archbang.org]
+
+echo "Pacman Key setup..."
+sudo pacman-key --init
+sudo pacman-key --populate archlinux
+echo "Complete..."

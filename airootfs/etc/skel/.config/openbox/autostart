@@ -1,0 +1,24 @@
+# Set wallpaper
+feh --bg-fill ~/Backgrounds/valley.jpg &
+
+# Enable as required
+#xbacklight -set 100 &
+#/usr/bin/synclient TouchpadOff=1 &
+
+# Xorg keyboard map change for your own country/keyboard layout
+setxkbmap gb &
+
+# Onscreen system stats
+(sleep 2 && conky) &
+
+# Network Manager Applet
+(sleep 2 && nm-applet) &
+
+# Volume
+(sleep 2 && volumeicon) &
+
+# Battery icon
+(sleep 2 && cbatticon -n) &
+
+# Panel
+(sleep 2 && tint2) &

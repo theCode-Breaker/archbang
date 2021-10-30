@@ -1,0 +1,120 @@
+Welcome to ArchBang Live a live iso [www.archbang.org/Guide].
+
+Information here is as up to date as possible.
+
+Do not advise or condone posting problems to Archlinux forums it will result in at best your thread closed or worse deleted.
+
+===Pacman===
+
+To get pacman running you will need a working network connection, pacman keys and mirrorlist (which needs a server nearest to your location enabled).
+Open a terminal and run the following commands:
+
+	config_edit # select mirrorlist
+
+    # next commands are required post install
+	sudo pacman-key --init
+	sudo pacman-key --populate archlinux 
+	sudo pacman -Syyu archlinux-keyring # this will update system packages and keyring.
+
+This will refresh package database and allow you to install any package that needs updating.
+
+	sudo pacman -S <package_name>
+
+====Installation====
+
+To run installer either run sudo abinstall in a terminal of use Super + i keybinding
+
+You can create partitions from installer itself or you can use gparted. These partitions should then be mounted to /mnt 
+
+Installer Menu includes:
+
+1) Partition Scheme # Setup target device for install and mount partitons
+2) Install ArchBang # transfers iso image to target device
+3) Hostname # Your given machine name default is 'archbang'
+4) Location # Timezone and country
+5) Hardware Clock # UTC or localtime (user preference can affect windows dual boot)
+6) Location # Keyboard layout/ Language (Console), Servers based on your country
+7) Desktop Keyboard Layout # Default is gb (United Kingdom)
+8) Bootloader # Grub2, Syslinux, Systemd-boot (UEFI)
+9) Root password # Very important as iso is password free
+10) Create User # Set up new user for install and password
+
+====================
+=== Post Install ===
+====================
+
+Autologin is disabled during install, you will end up at a log in prompt. Enter your chosen username and password to log in.
+
+====Video drivers====
+
+This is optional remove xorg video drivers that were shipped with ArchBang by typing:
+
+## Note the following drivers listed may not be up to date
+
+You can check what drivers you have installed by running
+
+	pacman -Qq | grep xf86-video
+
+ sudo pacman -R xf86-video-apm xf86-video-ark xf86-video-ast\
+ xf86-video-ati xf86-video-chips xf86-video-cirrus\
+ xf86-video-dummy xf86-video-fbdev xf86-video-glint\
+ xf86-video-i128 xf86-video-i740 xf86-video-intel-uxa\
+ xf86-video-mach64 xf86-video-mga xf86-video-neomagic\
+ xf86-video-nv xf86-video-r128 xf86-video-rendition\
+ xf86-video-s3 xf86-video-s3virge xf86-video-savage\
+ xf86-video-siliconmotion xf86-video-sis xf86-video-sisusb\
+ xf86-video-tdfx xf86-video-trident xf86-video-tseng\
+ xf86-video-v4l xf86-video-vesa xf86-video-vmware\
+ xf86-video-voodoo xf86-video-xgi xf86-video-xgixp\
+ ati-dri intel-dri mach64-dri mga-dri r128-dri\
+ savage-dri sis-dri tdfx-dri
+
+To find out your video chipset type in terminal
+
+	lspci | grep VGA
+
+Track it down in the list by typing in terminal as root:
+
+	pacman -Ss xf86-video | less
+
+Install your video driver:
+
+	pacman -S your_video_driver
+
+====Sound====
+
+If you don't get any sound you can right click on volume icon on panel then
+'Open Mixer' or in a terminal run alsamixer
+To unmute a channel press M to raise levels use up and down keys. To exit and
+save hit Escape key
+
+====Disable Blank Screen After 10 Minutes====
+
+To disable blank screen after 10 minutes of inactivity, create a file in
+/etc/X11/xorg.conf.d called custom.conf with this code:
+
+ Section "ServerFlags"
+ # disable low-level screensaver and screen DPMS poweroff
+    Option "BlankTime" "0"
+    Option "StandbyTime" "0"
+    Option "SuspendTime" "0"
+    Option "OffTime" "0"
+ EndSection
+
+
+Everything about Arch isn't covered in this guide so check the Arch Wiki [https://wiki.archlinux.org/]
+
+====Quick Tips====
+
+To allow Htop to run from Openbox Menu lxterminal is soft linked with xterm.
+If you wish to use xterm terminal then remove link with:
+
+  sudo rm /usr/bin/xterm
+
+Then load package as normal
+
+  sudo pacman -S xterm
+
+Desktop Keyboard Layout Live:
+
+Check file ~/.config/openbox/autostart -- edit line setxkbmap gb & (change gb to your keyboard layout)
