@@ -2,7 +2,7 @@
 # shellcheck disable=SC2034
 # Modified for ArchBang
 
-iso_name="archbang-beta"
+iso_name="archbang-autumn"
 iso_label="ARCHBANG_$(date +%d%m)"
 iso_publisher="ArchBang Linux <https://www.archbang.org>"
 iso_application="ArchBang Linux Live/Rescue Iso"

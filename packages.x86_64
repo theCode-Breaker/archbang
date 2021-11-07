@@ -47,7 +47,7 @@ i3lock
 rofi
 
 # Themes and icons
-arc-icon-theme
+#arc-icon-theme
 #arc-gtk-theme
 
 # Media

@@ -177,7 +177,7 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 #
 
 # Wallpaper feh???
-exec $ei feh --bg-fill ~/Backgrounds/estate.jpg 
+exec $ei feh --bg-fill ~/Backgrounds/valley.jpg 
 
 # Stat network manager
 exec $ei nm-applet 
