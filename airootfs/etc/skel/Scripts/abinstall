@@ -900,10 +900,9 @@ configure_mkinitcpio(){
   fi
   # sed would be an easier option....
   mv "${MNT}/etc/mkinitcpio.d/linux.preset.ab" "${MNT}/etc/mkinitcpio.d/linux.preset"
-  # delete whole hooks line 
-  sed '/^HOOKS/d' "${MNT}/etc/mkinitcpio.conf"
-  # then re-add HOOKS required..
-  echo "HOOKS=(base udev memdisk block filesystems keyboard)" >> "${MNT}/etc/mkinitcpio.conf"
+  # delete whole hooks line, replace with installed version
+  sed -i '/^HOOKS/c\HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)' "${MNT}/etc/mkinitcpio.conf"
+  
   [[ $LUKS -eq 1 ]] && sed -i '/^HOOK/s/block/block keymap encrypt/' ${MNT}/etc/mkinitcpio.conf
   [[ $LVM -eq 1 ]] && sed -i '/^HOOK/s/filesystems/lvm2 filesystems/' ${MNT}/etc/mkinitcpio.conf
   arch_chroot "mkinitcpio -p linux"

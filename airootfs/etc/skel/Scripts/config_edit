@@ -1,0 +1,24 @@
+#!/bin/bash
+# confg_edit by Mr Green [mrgreen@archbang.org]
+# basic dmenu style selector fed into rofi
+
+editor="l3afpad"
+
+path="$HOME/.config/openbox"
+
+options="Servers\nPacman config\nOpenbox menu\nOpenbox key binds\nOpenbox autostart"
+
+chosen=$(echo -e "$options" | rofi -p 'Select Option' -dmenu )
+
+case $chosen in
+	Servers) sudo ${editor} /etc/pacman.d/mirrorlist ;;
+
+	"Pacman config")  sudo ${editor} /etc/pacman.conf ;;
+
+	"Openbox menu")  ${editor} ${path}/menu.xml ;;
+
+	"Openbox key binds") ${editor} ${path}/rc.xml ;;
+
+	"Openbox autostart") ${editor} ${path}/autostart ;;
+esac
+

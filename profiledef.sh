@@ -16,7 +16,5 @@ file_permissions=(
   ["/etc/shadow"]="0:0:400"
   ["/root"]="0:0:750"
   ["/etc/skel/Scripts/"]="0:0:755"
- # ["/etc/skel/Scripts/config_edit"]="0:0:755"
- # ["/etc/skel/Scripts/packey"]="0:0:755"
   ["/root/mvuser"]="0:0:755"
 )

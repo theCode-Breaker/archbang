@@ -1,5 +1,5 @@
 # i3status configuration file.
-# see "man i3status" for documentation.
+# see "man i2status" for documentation.
 
 # It is important that this file is edited as UTF-8.
 # The following line should contain a sharp s:
@@ -50,8 +50,7 @@ run_watch VPN {
 }
 
 tztime local {
-		format = "<span background='#002700'> %time </span>"
-		format_time = " %a %-d %b %H:%M "
+		format = "<span background='#007300'>  %a %d %b %H:%M  </span>"
 }
 
 

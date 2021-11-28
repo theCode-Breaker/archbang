@@ -2,10 +2,10 @@ configuration{
     modi: "drun,window,ssh";
     font: "Sans 10";
     show-icons: true;
-    icon-theme: "Oranchelo";
-    terminal: "st";
+    icon-theme: "AB-autumn-icons";
+    terminal: "lxterminal";
     drun-display-format: "{icon} {name}";
-    display-drun: " drun";
+    display-drun: " Select or Type: ";
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
@@ -22,10 +22,10 @@ element-text, element-icon {
     dark-black: #1e2122;
     bg-col:  #222526;
     border-col: #282b2c;
+    green: #67781F;
     selected-col: #282b2c;
-    blue: #8dae88;
-    fg-col: #d4be98;
-    fg-col2: #df736d;
+	fg-col: #FFFFFF;
+    fg-col2: #67781F;
     width: 600;
 }
 
@@ -51,7 +51,7 @@ inputbar {
 }
 
 prompt {
-    background-color: @blue;
+    background-color: @green;
     padding: 5px 5px 0px;
     text-color: @bg-col;
     border-radius: 3px;
