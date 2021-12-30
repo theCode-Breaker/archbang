@@ -99,7 +99,7 @@ rsync
 pv
 dosfstools
 btrfs-progs
-htop
+btop
 parted
 gptfdisk
 ddrescue
@@ -165,6 +165,7 @@ man-db
 man-pages
 mdadm
 nano
+vim
 netctl
 pacman
 pciutils

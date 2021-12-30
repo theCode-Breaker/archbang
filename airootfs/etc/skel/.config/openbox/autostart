@@ -1,5 +1,5 @@
 # Set wallpaper
-feh --bg-fill ~/Backgrounds/valley.jpg &
+feh --bg-fill ~/Backgrounds/shore.jpg &
 
 # Enable as required
 #xbacklight -set 100 &

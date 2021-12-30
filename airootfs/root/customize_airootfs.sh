@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Configure live iso
 
 set -e -u -x
@@ -17,7 +17,8 @@ chmod -c 0440 /etc/sudoers
 echo "archbang" > /etc/hostname
 
 #  Hosts file to archbang (test version)
-sed -i "0,/127.0.0.1/s/localhost/archbang/2" /etc/hosts
+# this needs to change
+#sed -i "0,/127.0.0.1/s/localhost/archbang/2" /etc/hosts
 
 # Vconsole
 echo "KEYMAP=gb" > /etc/vconsole.conf
@@ -37,12 +38,9 @@ ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 useradd -m -p "" -g users -G "wheel" -s /bin/bash ablive
 chown ablive /home/ablive
 
-# Add +x to Scripts and mvuser...
-chmod +x /root/mvuser
-chmod +x /etc/skel/Scripts/{abinstall,packey}
-
-# Fix htop looking for xterm
-ln -s /usr/bin/lxterminal /usr/bin/xterm
+# Remove /etc/skel home config files
+rm -r /etc/skel/
+mkdir /etc/skel
 
 # remove desktop files
 path="/usr/share/applications"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # confg_edit by Mr Green [mrgreen@archbang.org]
 # basic dmenu style selector fed into rofi
 

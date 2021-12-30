@@ -126,7 +126,7 @@ bindsym $mod+r mode "resize"
 
 # Colours
 # class                 border  bground text    indicator child_border
-client.focused          #198C21 #198C21 #FFFFFF #198C21   #198C21
+client.focused          #A9D0F1 #A9D0F1 #FFFFFF #A9D0F1   #A9D0F1
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
 client.unfocused        #333333 #222222 #888888 #292D2E   #222222
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
@@ -138,10 +138,10 @@ bar {
 
     colors {
     background #000000
-    statusline #FFFFFF
+    statusline #111111
     separator  #666666
 
-    focused_workspace  #007300 #007300 #FFFFFF
+    focused_workspace  #A9D0F1 #A9D0F1 #111111
     active_workspace   #333333 #222222 #FFFFFF
     inactive_workspace #333333 #222222 #888888
     urgent_workspace   #2F343A #002e00 #000000
@@ -177,7 +177,7 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 #
 
 # Wallpaper feh???
-exec $ei feh --bg-fill ~/Backgrounds/valley.jpg 
+exec $ei feh --bg-fill ~/Backgrounds/shore.jpg 
 
 # Stat network manager
 exec $ei nm-applet 

@@ -39,7 +39,7 @@ following: 'Mouse' - where the mouse is, or
 'Active' - where the active window is -->
 </placement>
 <theme>
-<name>AB-Autumn</name>
+<name>AB-Winter</name>
 <titleLayout>NLIMC</titleLayout>
 <!--
 available characters are NDSLIMC, each can occur at most once.
@@ -360,6 +360,15 @@ cases. -->
 </action>
 </keybind>
 
+<keybind key="W-s">
+<action name="Execute">
+<command>lxterminal -t "System Monitor" -e "btop"</command>
+<startupnotify>
+<enabled>yes</enabled>
+<name>System Stats</name>
+</startupnotify>
+</action>
+</keybind>
 
 <keybind key="W-i">
 <action name="Execute">

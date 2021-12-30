@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Abinstall ArchBang installer
 # Modified by Mr Green mrgreen(at)archbang(dot)org

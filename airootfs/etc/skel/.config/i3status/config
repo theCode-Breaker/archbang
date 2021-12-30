@@ -50,7 +50,7 @@ run_watch VPN {
 }
 
 tztime local {
-		format = "<span background='#007300'>  %a %d %b %H:%M  </span>"
+		format = "<span background='#A9D0F1'>  %a %d %b %H:%M  </span>"
 }
 
 

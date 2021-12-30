@@ -26,12 +26,12 @@ border_width = 2
 border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #67781F 50
-border_color = #67781F 50
-background_color_hover = #67781F 50
-border_color_hover = #67781F 50
-background_color_pressed = #67781F 50
-border_color_pressed = #67781F 50
+background_color = #A9D0F1 50
+border_color = #A9D0F1 50
+background_color_hover = #A9D0F1 50
+border_color_hover = #A9D0F1 50
+background_color_pressed = #A9D0F1 50
+border_color_pressed = #A9D0F1 50
 
 # Background 3: Active task, Active taskbar, Inactive taskbar, Panel
 rounded = 0
@@ -52,12 +52,12 @@ border_width = 0
 border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #67781F 71
-border_color = #67781F 71
-background_color_hover = #67781F 71
-border_color_hover = #67781F 71
-background_color_pressed = #67781F 71
-border_color_pressed = #67781F 71
+background_color = #A9D0F1 71
+border_color = #A9D0F1 71
+background_color_hover = #A9D0F1 71
+border_color_hover = #A9D0F1 71
+background_color_pressed = #A9D0F1 71
+border_color_pressed = #A9D0F1 71
 
 # Background 5: 
 rounded = 1

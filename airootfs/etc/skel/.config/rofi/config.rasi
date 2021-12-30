@@ -22,10 +22,10 @@ element-text, element-icon {
     dark-black: #1e2122;
     bg-col:  #222526;
     border-col: #282b2c;
-    green: #67781F;
+    blue: #A9D0F1;
     selected-col: #282b2c;
 	fg-col: #FFFFFF;
-    fg-col2: #67781F;
+    fg-col2: #A9D0F1;
     width: 600;
 }
 
@@ -51,7 +51,7 @@ inputbar {
 }
 
 prompt {
-    background-color: @green;
+    background-color: @blue;
     padding: 5px 5px 0px;
     text-color: @bg-col;
     border-radius: 3px;
