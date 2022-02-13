@@ -2,23 +2,7 @@ Welcome to ArchBang Live a live iso [www.archbang.org/Guide].
 
 Information here is as up to date as possible.
 
-Do not advise or condone posting problems to Archlinux forums it will result in at best your thread closed or worse deleted.
-
-===Pacman===
-
-To get pacman running you will need a working network connection, pacman keys and mirrorlist (which needs a server nearest to your location enabled).
-Open a terminal and run the following commands:
-
-	config_edit # select mirrorlist
-
-    # next commands are required post install
-	sudo pacman-key --init
-	sudo pacman-key --populate archlinux 
-	sudo pacman -Syyu archlinux-keyring # this will update system packages and keyring.
-
-This will refresh package database and allow you to install any package that needs updating.
-
-	sudo pacman -S <package_name>
+Do not advise posting problems related to ArchBang on Archlinux forums it will result in at best your thread closed or worse deleted.
 
 ====Installation====
 
@@ -43,43 +27,25 @@ Installer Menu includes:
 === Post Install ===
 ====================
 
+===Pacman===
+
+To get pacman running you will need a working network connection, either wired [connects automatically] or wireless [click icon on panel and find your named network].
+
+Open a terminal [Super + t] then update pacmand database:
+
+    sudo pacman -Syy
+
+Then you can install a package of choice using:
+
+	sudo pacman -S <package_name>
+
 Autologin is disabled during install, you will end up at a log in prompt. Enter your chosen username and password to log in.
 
-====Video drivers====
+If you have not set your local mirrors during install you should edit them. Either use config_edit script and select mirrorlist or visit https://archlinux.org/mirrorlist/.
 
-This is optional remove xorg video drivers that were shipped with ArchBang by typing:
+Will link to arch wiki page for more information: https://wiki.archlinux.org/title/Mirrors
 
-## Note the following drivers listed may not be up to date
 
-You can check what drivers you have installed by running
-
-	pacman -Qq | grep xf86-video
-
- sudo pacman -R xf86-video-apm xf86-video-ark xf86-video-ast\
- xf86-video-ati xf86-video-chips xf86-video-cirrus\
- xf86-video-dummy xf86-video-fbdev xf86-video-glint\
- xf86-video-i128 xf86-video-i740 xf86-video-intel-uxa\
- xf86-video-mach64 xf86-video-mga xf86-video-neomagic\
- xf86-video-nv xf86-video-r128 xf86-video-rendition\
- xf86-video-s3 xf86-video-s3virge xf86-video-savage\
- xf86-video-siliconmotion xf86-video-sis xf86-video-sisusb\
- xf86-video-tdfx xf86-video-trident xf86-video-tseng\
- xf86-video-v4l xf86-video-vesa xf86-video-vmware\
- xf86-video-voodoo xf86-video-xgi xf86-video-xgixp\
- ati-dri intel-dri mach64-dri mga-dri r128-dri\
- savage-dri sis-dri tdfx-dri
-
-To find out your video chipset type in terminal
-
-	lspci | grep VGA
-
-Track it down in the list by typing in terminal as root:
-
-	pacman -Ss xf86-video | less
-
-Install your video driver:
-
-	pacman -S your_video_driver
 
 ====Sound====
 

@@ -226,5 +226,5 @@ tooltip_hide_timeout = 0
 tooltip_padding = 4 4
 tooltip_background_id = 1
 tooltip_font_color = #ffffff 42
-tooltip_font = Noto Sans 8
+tooltip_font = Sans 8
 

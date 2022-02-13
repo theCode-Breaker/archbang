@@ -8,8 +8,12 @@ shopt -s extglob
 sed -i 's/#\(en_GB\.UTF-8\)/\1/' /etc/locale.gen
 locale-gen
 
+# make a backup and then uncomment mirrorlist
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.abbackup
+sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
+
 # Sudo to allow no password
-sed -i 's/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/g' /etc/sudoers
+sed -i 's/# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/g' /etc/sudoers
 chown -c root:root /etc/sudoers
 chmod -c 0440 /etc/sudoers
 

@@ -2,7 +2,7 @@
 # shellcheck disable=SC2034
 # Modified for ArchBang
 
-iso_name="archbang-winter-rc"
+iso_name="archbang-winter"
 iso_label="ARCHBANG_$(date +%d%m)"
 iso_publisher="ArchBang Linux <https://www.archbang.org>"
 iso_application="ArchBang Linux Live/Rescue Iso"

@@ -24,7 +24,6 @@ alsa-oss
 # Window Manager Stuff
 laptop-detect
 xdg-user-dirs
-#dmenu
 conky
 tint2
 openbox
@@ -36,18 +35,18 @@ cbatticon
 lxterminal
 l3afpad
 ncdu
-#dunst
-#notification-daemon
-
+rofi
+pragha
+vim
 
 # i3 version
 i3-wm
 i3status
 i3lock
-rofi
+
 
 # Themes and icons
-#arc-icon-theme
+arc-icon-theme
 #arc-gtk-theme
 
 # Media
@@ -76,6 +75,7 @@ firefox
 scrot
 pacman-contrib
 tlp
+archinstall
 
 # Network Tools
 tcl
@@ -138,7 +138,6 @@ bzip2
 coreutils
 cryptsetup
 device-mapper
-#dhcpcd
 dhclient
 diffutils
 e2fsprogs
@@ -165,7 +164,6 @@ man-db
 man-pages
 mdadm
 nano
-vim
 netctl
 pacman
 pciutils
@@ -193,3 +191,4 @@ mkinitcpio-archiso
 mkinitcpio-nfs-utils
 nbd
 edk2-shell
+
