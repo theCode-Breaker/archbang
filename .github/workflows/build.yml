@@ -36,7 +36,7 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: ${{ env.DATE }}
           prerelease: false
-          title: "ALG-bspwm"
+          title: "Archbang"
           files: |
             out/*
             
