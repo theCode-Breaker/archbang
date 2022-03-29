@@ -27,7 +27,7 @@ jobs:
       - name: Build ISO
         run: |
           pacman -S --noconfirm --needed archlinux-keyring wget
-          mkarchiso -v -w ./work -o ./out ./
+          ./build -v -w ./work -o ./out ./
           echo "ISO Built in ./out folder!"
         
       - name: Release
